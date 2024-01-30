@@ -45,6 +45,8 @@ const config: Config = {
           60: "#FCFCFC",
           80: "#F0F0F0",
           100: "#F5F5F5",
+          200: "#F9F9F9",
+          300: "#F8F8F9",
         },
         slate: { 200: "#E4EAF1", 700: '"#384357' },
         primary: { 400: "#DD4B39", 500: "#DB4444", 600: "#CE371C" },

@@ -48,7 +48,7 @@ const Button: FC<ButtonProps> = ({
       onClick={onClick}
       className={`px-12 py-4 bg-red-500 rounded-lg  justify-center items-center gap-2.5 inline-flex ${
         disabled ? "bg-opacity-70" : ""
-      } ${small ? "w-[145px] h-[50px] text-sm text-white" : "w-full h-14"}`}
+      } ${small ? "min-w-[145px] h-[50px] text-sm text-white" : "w-full h-14"}`}
     >
       <span className="text-neutral-50 text-xsm font-medium">{label}</span>
     </button>

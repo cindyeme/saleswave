@@ -14,7 +14,7 @@ const CheckoutLayout = ({ children }: { children: ReactNode }) => {
       <header className="border-b border-stroke">
         <nav className="shadow-xl pb-3 pt-8 border-b border-stroke">
           <div className="container mx-auto flex sm:flex-row flex-col space-y-4 justify-center sm:space-y-0 sm:justify-between items-center">
-            <div>{AppIcons.ic_pixi_commerce}</div>
+            <Link href={"/"}>{AppIcons.ic_pixi_commerce}</Link>
             <div className="divide-x divide-slate-200 flex items-center gap-4">
               <p className="text-grey-900 text-[0.6875rem] font-medium sm:pr-4">
                 Secure Checkout

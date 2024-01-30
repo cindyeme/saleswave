@@ -57,8 +57,8 @@ const CheckoutShippingInfo: FC<{ formik: FormikProps<CheckoutForm> }> = ({
             errors={!!(errors.additionalAddress && touched.additionalAddress)}
             errorMsg={errors.additionalAddress}
           />
-          <div className="flex items-center justify-between">
-            <div className="h-[51px] bg-neutral-60 rounded-lg border border-neutral-60 flex items-center space-x-4 px-4">
+          <div className="flex sm:flex-row flex-col space-y-6 sm:space-y-0 sm:items-center sm:justify-between">
+            <div className="h-[51px] bg-neutral-60 rounded-lg border border-neutral-60 flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:items-center sm:space-x-4 px-4">
               <span className="text-grey-500 font-medium text-xsm">
                 Address Label (optional)
               </span>
@@ -87,7 +87,7 @@ const CheckoutShippingInfo: FC<{ formik: FormikProps<CheckoutForm> }> = ({
                 </label>
               </div>
             </div>
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-3 ">
               <span className="text-grey-900 text-xsm font-medium">
                 Set as Default
               </span>

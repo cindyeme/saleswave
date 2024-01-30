@@ -5,7 +5,7 @@ import { useCallback } from "react";
 
 const BackButton = ({ label }: { label: string }) => {
   const router = useRouter();
-  const handleBack = useCallback(() => router.back(), [router]);
+  const handleBack = useCallback(() => router.push('/'), [router]);
   return (
     <button
       type="button"

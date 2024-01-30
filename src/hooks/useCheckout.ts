@@ -9,7 +9,7 @@ import { SET_CHECKOUT_DATA, useAppDispatch } from "@/store";
 const useCheckout = () => {
   const router = useRouter();
   const dispatch = useAppDispatch();
-  const [currentStep, setCurrentStep] = useState<number>(2);
+  const [currentStep, setCurrentStep] = useState<number>(0);
 
   const steps = useMemo(
     () => [

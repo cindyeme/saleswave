@@ -14,12 +14,22 @@ type CheckoutForm = {
   additionalAddress: string;
 };
 
-type Order = {
-  imageUrl: string;
-  brand: string;
-  name: string;
+type Product = {
+  id: string;
+  oldPrice: string;
   price: string;
-  quantity: string;
-}
+  quantity: number;
+  rating: string;
+  stars: number;
+  imageUrl: string;
+  name: string;
+  brand: string;
+  description: string;
+};
 
-export type { CheckoutForm, Order };
+type Order = Pick<
+  Product,
+  "imageUrl" | "brand" | "name" | "price" | "quantity"
+>;
+
+export type { CheckoutForm, Order, Product };
