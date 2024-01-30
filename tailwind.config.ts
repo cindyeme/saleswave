@@ -29,8 +29,17 @@ const config: Config = {
         white: "#FFFFFF",
         black: "#000000",
         "black-30": "rgba(0, 0, 0, 0.3)",
+        "gray-30": "rgba(133, 133, 133, 0.08)",
+        success: "#4AB247",
         stroke: "#F0F0F0",
-        grey: { 500: "#667085;", 700: "#B3BCCD", 900: "#0D111B" },
+        grey: {
+          300: "#FAFCFE;",
+          400: "#DFE3EA;",
+          500: "#667085;",
+          600: "#394357",
+          700: "#B3BCCD",
+          900: "#0D111B",
+        },
         neutral: {
           50: '"#FAFAFA',
           60: "#FCFCFC",
@@ -38,10 +47,11 @@ const config: Config = {
           100: "#F5F5F5",
         },
         slate: { 200: "#E4EAF1", 700: '"#384357' },
-        primary: { 500: "#DB4444" },
+        primary: { 400: "#DD4B39", 500: "#DB4444", 600: "#CE371C" },
       },
       fontSize: {
         xxs: ["0.625rem", { lineHeight: "1rem" }], //10px
+        "11": ["0.6875rem", { lineHeight: "1rem" }], //11px
         xs: ["0.75rem", { lineHeight: "1rem" }], //12px
         xsm: ["0.8125rem", { lineHeight: "1.25rem" }], //13px
         sm: ["0.875rem", { lineHeight: "1.25rem" }], //14px

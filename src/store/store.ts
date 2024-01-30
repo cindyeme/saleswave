@@ -1,15 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
-import { apiSlice, checkoutSlice } from ".";
+import { checkoutSlice } from ".";
 
 export const store = configureStore({
   reducer: {
-    general: checkoutSlice,
-    [apiSlice.reducerPath]: apiSlice.reducer,
+    checkout: checkoutSlice,
   },
   devTools: process.env.NODE_ENV !== "production",
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(apiSlice.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

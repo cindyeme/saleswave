@@ -1,30 +1,28 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../store";
+import type { CheckoutForm } from "@/types";
 
-type AuthInitialState = {
-  itemId: string | number | null;
+type CheckoutInitialState = {
+  checkoutData: CheckoutForm | null;
 };
-const initialState: AuthInitialState = {
-  itemId: null,
+const initialState: CheckoutInitialState = {
+  checkoutData: null,
 };
 
-const generalSlice = createSlice({
-  name: "general",
+const checkoutSlice = createSlice({
+  name: "checkout",
   initialState,
   reducers: {
-    setItemId: (state, { payload }) => {
-      state.itemId = payload;
-    },
-    removeItemId: (state) => {
-      state.itemId = null;
+    SET_CHECKOUT_DATA: (state, { payload }) => {
+      state.checkoutData = payload;
     },
   },
 });
 
-const checkoutSlice = (state: RootState) => state.general;
+const checkoutState = (state: RootState) => state.checkout;
 
-const { setItemId, removeItemId } = generalSlice.actions;
+const { SET_CHECKOUT_DATA } = checkoutSlice.actions;
 
-export { checkoutSlice, setItemId, removeItemId };
+export { checkoutState, SET_CHECKOUT_DATA };
 
-export default generalSlice.reducer;
+export default checkoutSlice.reducer;
