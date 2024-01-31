@@ -1,5 +1,6 @@
 import { Button } from "@/components";
 import { AppIcons } from "@/elements";
+import { checkoutState, useAppSelector } from "@/store";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -11,6 +12,7 @@ const CheckoutConfirmation = () => {
     { icon: AppIcons.ic_track, text: "Track Order" },
     { icon: AppIcons.ic_camera, text: "Take a Screenshot" },
   ];
+  const { checkoutData } = useAppSelector(checkoutState);
   return (
     <div className="py-8 max-w-[583px] mx-auto flex flex-col space-y-10">
       <div className="flex flex-col items-center justify-center space-y-4">
@@ -25,8 +27,13 @@ const CheckoutConfirmation = () => {
         </h5>
         <p className="text-sm text-center text-grey-500">
           You’ll receive an email at{" "}
-          <span className="text-primary-400">sarahoshuu@gmail.com</span> once
-          your order is confirmed
+          <a
+            href={`mailto:${checkoutData?.email ?? "sarahoshuu@gmail.com"}`}
+            className="text-primary-400"
+          >
+            {checkoutData?.email ?? "sarahoshuu@gmail.com"}
+          </a>{" "}
+          once your order is confirmed
         </p>
         <div className="pt-5">
           <Button
