@@ -18,8 +18,9 @@ const Navigation = () => {
           Exclusive
         </h1>
         <ul className="inline-flex items-center gap-12">
-          {navLinks.map((link) => (
+          {navLinks.map((link, idx) => (
             <li
+              key={idx}
               className={
                 pathname == link.href ? "underline underline-offset-8" : ""
               }
