@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -17,12 +17,12 @@
     scrollbar-width: none; /* Firefox */
   }
 }
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0; 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 body {
   margin: 0px;
@@ -82,19 +82,19 @@ body {
   height: 24px;
   width: 24px;
   background-color: #fff;
-  border: 1px solid #B3BCCD;
+  border: 1px solid #b3bccd;
   border-radius: 50%;
 }
 
 /* On mouse-over, add a grey background color */
 .radio-container:hover input ~ .checkmark {
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
 
 /* When the radio button is checked, add a blue background */
 .radio-container input:checked ~ .checkmark {
-  background-color: #DD4B39;
-  border-color: #DD4B39;
+  background-color: #dd4b39;
+  border-color: #dd4b39;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -111,12 +111,12 @@ body {
 
 /* Style the indicator (dot/circle) */
 .radio-container .checkmark:after {
- 	top: 6px;
-	left: 6px;
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	background: white;
+  top: 6px;
+  left: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
 }
 
 .switch {
@@ -126,7 +126,7 @@ body {
   height: 20px;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -140,8 +140,8 @@ body {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -152,12 +152,12 @@ body {
   left: 4px;
   bottom: 3px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: #DD4B39;
+  background-color: #dd4b39;
 }
 
 input:checked + .slider:before {
@@ -174,7 +174,16 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
+.hero-endframe {
+  background: url(/images/hero-endframe.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.categories-me {
+  background: url(/images/categories.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .no-focus {
   @apply focus:outline-none focus:shadow-none;
 }
